@@ -1,6 +1,6 @@
 # I2C_Verilog
 # Introduction : 
-This project implements the Inter-Integrated Circuit(I2C) protocol using Verilog HDL. 
+* This project implements the Inter-Integrated Circuit(I2C) protocol using Verilog HDL. 
 It includes both Master and Slave modules with proper handshaking and data transmission.
 Designed to work in simulation and can be extended to FPGA-based implementation.
 # Features :
