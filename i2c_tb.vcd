@@ -1,0 +1,566 @@
+$date
+	Sun Mar 16 19:23:20 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ms
+$end
+$scope module i2c_tb $end
+$var wire 1 ! sda $end
+$var wire 8 " slave_data [7:0] $end
+$var wire 1 # scl $end
+$var wire 1 $ done $end
+$var wire 1 % ack $end
+$var reg 1 & clk $end
+$var reg 8 ' master_data [7:0] $end
+$var reg 1 ( reset_n $end
+$var reg 7 ) slave_addr [6:0] $end
+$scope module master $end
+$var wire 1 & clk $end
+$var wire 8 * data_in [7:0] $end
+$var wire 1 ( reset_n $end
+$var wire 1 ! sda $end
+$var wire 7 + slave_addr [6:0] $end
+$var parameter 3 , IDLE $end
+$var parameter 3 - SEND_ADDR $end
+$var parameter 3 . SEND_DATA $end
+$var parameter 3 / START $end
+$var parameter 3 0 WAIT_ACK $end
+$var reg 1 1 ack_received $end
+$var reg 4 2 bit_count [3:0] $end
+$var reg 8 3 data_to_send [7:0] $end
+$var reg 1 $ done $end
+$var reg 3 4 next_state [2:0] $end
+$var reg 1 # scl $end
+$var reg 1 5 sda_out $end
+$var reg 3 6 state [2:0] $end
+$upscope $end
+$scope module slave $end
+$var wire 7 7 addr [6:0] $end
+$var wire 1 & clk $end
+$var wire 1 ( reset_n $end
+$var wire 1 # scl $end
+$var wire 1 ! sda $end
+$var parameter 2 8 ADDRESS_MATCH $end
+$var parameter 2 9 IDLE $end
+$var parameter 2 : RECEIVE_BYTE $end
+$var parameter 2 ; SEND_ACK $end
+$var reg 1 % ack $end
+$var reg 4 < bit_count [3:0] $end
+$var reg 8 = data_out [7:0] $end
+$var reg 2 > next_state [1:0] $end
+$var reg 8 ? received_data [7:0] $end
+$var reg 1 @ sda_out $end
+$var reg 2 A state [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b11 ;
+b10 :
+b0 9
+b1 8
+b100 0
+b1 /
+b11 .
+b10 -
+b0 ,
+$end
+#0
+$dumpvars
+b0 A
+x@
+bx ?
+bx >
+bx =
+bx <
+b1010000 7
+b0 6
+x5
+b1 4
+bx 3
+bx 2
+x1
+b1010000 +
+b10100101 *
+b1010000 )
+0(
+b10100101 '
+0&
+x%
+x$
+x#
+bx "
+x!
+$end
+#5
+b0 2
+0$
+15
+1#
+b0 <
+0%
+1&
+#10
+0&
+1(
+#15
+b10 4
+b1 6
+bx A
+1&
+#20
+0&
+#25
+b10 6
+1&
+#26
+b10100000 3
+0#
+05
+#30
+0&
+#35
+b1 2
+b1000000 3
+15
+1&
+#40
+0&
+#45
+b10 2
+b10000000 3
+05
+1&
+#50
+0&
+#55
+b11 2
+b0 3
+15
+1&
+#60
+0&
+#65
+b100 2
+05
+1&
+#70
+0&
+#75
+b101 2
+1&
+#80
+0&
+#85
+b110 2
+1&
+#90
+0&
+#95
+b111 2
+1&
+#100
+0&
+#105
+b100 4
+b1000 2
+1&
+#110
+0&
+#115
+b0xx 4
+b100 6
+1&
+#120
+0&
+#125
+b0 4
+15
+b0xx 6
+1&
+#130
+0&
+#135
+b1 4
+b0 6
+1&
+#140
+0&
+#145
+b10 4
+b0 2
+1#
+b1 6
+1&
+#150
+0&
+#155
+b10 6
+1&
+#156
+b10100000 3
+0#
+05
+#160
+0&
+#165
+b1 2
+b1000000 3
+15
+1&
+#170
+0&
+#175
+b10 2
+b10000000 3
+05
+1&
+#180
+0&
+#185
+b11 2
+b0 3
+15
+1&
+#190
+0&
+#195
+b100 2
+05
+1&
+#200
+0&
+#205
+b101 2
+1&
+#210
+0&
+#215
+b110 2
+1&
+#220
+0&
+#225
+b111 2
+1&
+#230
+0&
+#235
+b100 4
+b1000 2
+1&
+#240
+0&
+#245
+b0xx 4
+b100 6
+1&
+#250
+0&
+#255
+b0 4
+15
+b0xx 6
+1&
+#260
+0&
+#265
+b1 4
+b0 6
+1&
+#270
+0&
+#275
+b10 4
+b0 2
+1#
+b1 6
+1&
+#280
+0&
+#285
+b10 6
+1&
+#286
+b10100000 3
+0#
+05
+#290
+0&
+#295
+b1 2
+b1000000 3
+15
+1&
+#300
+0&
+#305
+b10 2
+b10000000 3
+05
+1&
+#310
+0&
+#315
+b11 2
+b0 3
+15
+1&
+#320
+0&
+#325
+b100 2
+05
+1&
+#330
+0&
+#335
+b101 2
+1&
+#340
+0&
+#345
+b110 2
+1&
+#350
+0&
+#355
+b111 2
+1&
+#360
+0&
+#365
+b100 4
+b1000 2
+1&
+#370
+0&
+#375
+b0xx 4
+b100 6
+1&
+#380
+0&
+#385
+b0 4
+15
+b0xx 6
+1&
+#390
+0&
+#395
+b1 4
+b0 6
+1&
+#400
+0&
+#405
+b10 4
+b0 2
+1#
+b1 6
+1&
+#410
+0&
+#415
+b10 6
+1&
+#416
+b10100000 3
+0#
+05
+#420
+0&
+#425
+b1 2
+b1000000 3
+15
+1&
+#430
+0&
+#435
+b10 2
+b10000000 3
+05
+1&
+#440
+0&
+#445
+b11 2
+b0 3
+15
+1&
+#450
+0&
+#455
+b100 2
+05
+1&
+#460
+0&
+#465
+b101 2
+1&
+#470
+0&
+#475
+b110 2
+1&
+#480
+0&
+#485
+b111 2
+1&
+#490
+0&
+#495
+b100 4
+b1000 2
+1&
+#500
+0&
+#505
+b0xx 4
+b100 6
+1&
+#510
+0&
+#515
+b0 4
+15
+b0xx 6
+1&
+#520
+0&
+#525
+b1 4
+b0 6
+1&
+#530
+0&
+#535
+b10 4
+b0 2
+1#
+b1 6
+1&
+#540
+0&
+#545
+b10 6
+1&
+#546
+b10100000 3
+0#
+05
+#550
+0&
+#555
+b1 2
+b1000000 3
+15
+1&
+#560
+0&
+#565
+b10 2
+b10000000 3
+05
+1&
+#570
+0&
+#575
+b11 2
+b0 3
+15
+1&
+#580
+0&
+#585
+b100 2
+05
+1&
+#590
+0&
+#595
+b101 2
+1&
+#600
+0&
+#605
+b110 2
+1&
+#610
+0&
+#615
+b111 2
+1&
+#620
+0&
+#625
+b100 4
+b1000 2
+1&
+#630
+0&
+#635
+b0xx 4
+b100 6
+1&
+#640
+0&
+#645
+b0 4
+15
+b0xx 6
+1&
+#650
+0&
+#655
+b1 4
+b0 6
+1&
+#660
+0&
+#665
+b10 4
+b0 2
+1#
+b1 6
+1&
+#670
+0&
+#675
+b10 6
+1&
+#676
+b10100000 3
+0#
+05
+#680
+0&
+#685
+b1 2
+b1000000 3
+15
+1&
+#690
+0&
+#695
+b10 2
+b10000000 3
+05
+1&
+#700
+0&
+#705
+b11 2
+b0 3
+15
+1&
+#710
+0&
